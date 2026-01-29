@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Privacy Statement | Jumia Nigeria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #282828;
+            line-height: 1.7;
+            background: #f5f5f5;
+        }
+
+        .top-bar {
+            background-color: #313133;
+            padding: 8px 0;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #f68b1e;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .search-container {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+        }
+
+        .search-container button {
+            background-color: #f68b1e;
+            color: #fff;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .header-icon {
+            text-decoration: none;
+            color: #282828;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .header-icon:hover {
+            color: #f68b1e;
+        }
+
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+        }
+
+        .nav-content a {
+            text-decoration: none;
+            color: #282828;
+            padding: 12px 0;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f68b1e 0%, #ff9d3d 100%);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f68b1e;
+        }
+
+        .content-box h2 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            color: #282828;
+        }
+
+        .content-box h3 {
+            font-size: 18px;
+            margin: 25px 0 10px;
+            color: #f68b1e;
+        }
+
+        .content-box p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            margin: 15px 0 15px 30px;
+            color: #444;
+        }
+
+        .content-box li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #fff8f0;
+            border-left: 4px solid #f68b1e;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #2196F3;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #313133;
+            color: #fff;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #f68b1e;
+            text-transform: uppercase;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-section a:hover {
+            color: #f68b1e;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+            }
+
+            .content-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="#"><i class="fas fa-store"></i> Sell on Jumia</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <a href="index.html" class="logo">JUMIA</a>
+            <div class="search-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search products, brands and categories...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="header-icons">
+                <a href="#" class="header-icon">
+                    <i class="far fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="#" class="header-icon">
+                    <i class="far fa-question-circle"></i>
+                    <span>Help</span>
+                </a>
+                <a href="#" class="header-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <a href="#">Appliances</a>
+            <a href="#">Phones & Tablets</a>
+            <a href="#">Health & Beauty</a>
+            <a href="#">Electronics</a>
+            <a href="#">Fashion</a>
+            <a href="#">Supermarket</a>
+            <a href="#">Computing</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Privacy and Cookie Notice</h1>
+        <p>Your privacy is important to us</p>
+    </section>
+
+    <div class="content-wrapper">
+        <div class="content-box">
+            <p class="last-updated"><strong>Last Updated:</strong> April 1, 2020</p>
+
+            <p>At Jumia, we respect your privacy and want to protect your personal information. This Privacy and Cookie Notice explains how we collect and use your personal information when you visit our website or mobile applications. It also explains the steps we have taken to secure your personal information.</p>
+
+            <div class="highlight">
+                <strong><i class="fas fa-shield-alt"></i> Our Commitment:</strong> We are committed to protecting your privacy and handling your personal data in an open and transparent manner.
+            </div>
+
+            <h2>1. Who We Are</h2>
+            <p>This website and mobile applications are operated by Jumia Nigeria, a member of the Jumia group of companies. When we refer to "we", "us", or "our", we are referring to Jumia Nigeria.</p>
+
+            <h2>2. Information We Collect</h2>
+            <p>We collect your personal data in order to provide and continually improve our products and services. We may collect, use, store and transfer the following different kinds of personal data about you:</p>
+
+            <h3>2.1 Information You Provide to Us</h3>
+            <p>We receive and store the information you provide to us including:</p>
+            <ul>
+                <li><strong>Identity Data:</strong> First name, last name, username, date of birth, gender</li>
+                <li><strong>Contact Data:</strong> Email address, telephone number, billing address, delivery address</li>
+                <li><strong>Financial Data:</strong> Payment card details, bank account information</li>
+                <li><strong>Transaction Data:</strong> Details about payments and products you have purchased from us</li>
+                <li><strong>Profile Data:</strong> Your username and password, purchases, interests, preferences, feedback</li>
+            </ul>
+
+            <h3>2.2 Information on Your Use of Our Website and Mobile Applications</h3>
+            <p>We automatically collect and store certain types of information regarding your use of the Jumia marketplace including:</p>
+            <ul>
+                <li><strong>Technical Data:</strong> Internet protocol (IP) address, login data, browser type and version, device type and ID</li>
+                <li><strong>Usage Data:</strong> Information about your searches, views, downloads, and purchases</li>
+                <li><strong>Location Data:</strong> Information about your location</li>
+            </ul>
+
+            <h3>2.3 Information from Third Parties</h3>
+            <p>We may receive information about you from third parties including:</p>
+            <ul>
+                <li>Our carriers and payment service providers</li>
+                <li>Merchants and brands</li>
+                <li>Advertising service providers</li>
+                <li>Publicly available sources</li>
+            </ul>
+
+            <h2>3. How We Use Your Personal Data</h2>
+            <p>We use your personal data for the following purposes:</p>
+
+            <h3>3.1 To Provide Our Services</h3>
+            <ul>
+                <li>Process and deliver your orders</li>
+                <li>Manage payments, fees, and charges</li>
+                <li>Communicate with you about your orders</li>
+                <li>Provide customer service and support</li>
+            </ul>
+
+            <h3>3.2 To Improve Our Services</h3>
+            <ul>
+                <li>Understand how customers use our marketplace</li>
+                <li>Develop new products and services</li>
+                <li>Improve existing products and services</li>
+                <li>Conduct data analysis and testing</li>
+            </ul>
+
+            <h3>3.3 Marketing and Advertising</h3>
+            <ul>
+                <li>Send you promotional offers and advertisements</li>
+                <li>Provide personalized recommendations</li>
+                <li>Measure the effectiveness of our marketing campaigns</li>
+                <li>Show you relevant advertisements on third-party websites</li>
+            </ul>
+
+            <h3>3.4 Security and Fraud Prevention</h3>
+            <ul>
+                <li>Verify your identity</li>
+                <li>Detect and prevent fraud, spam, and abuse</li>
+                <li>Protect our rights and property</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+
+            <h2>4. Legal Basis for Processing</h2>
+            <p>We process your personal data based on the following legal grounds:</p>
+
+            <h3>4.1 Your Consent</h3>
+            <p>Where you have given us specific consent to process your personal data for a specific purpose, such as marketing communications.</p>
+
+            <h3>4.2 Performance of a Contract</h3>
+            <p>Where it is necessary to process your personal data to perform a contract with you, such as processing your order and delivering products.</p>
+
+            <h3>4.3 Legitimate Business Interests</h3>
+            <p>Where it is necessary for us to understand our customers, promote our services, and operate effectively, provided this does not unduly affect your privacy and rights.</p>
+
+            <h3>4.4 Compliance with Law</h3>
+            <p>Where we are subject to a legal obligation and need to use your personal data to comply with that obligation.</p>
+
+            <h2>5. Sharing Your Personal Data</h2>
+            <p>We may need to share your personal data with third parties for the following purposes:</p>
+
+            <h3>5.1 Service Providers</h3>
+            <p>We share data with companies that provide services on our behalf, including:</p>
+            <ul>
+                <li>Payment processing services</li>
+                <li>Delivery and logistics partners</li>
+                <li>Marketing and advertising partners</li>
+                <li>Technology and hosting providers</li>
+                <li>Customer service providers</li>
+            </ul>
+
+            <h3>5.2 Business Transfers</h3>
+            <p>In the event of a merger, acquisition, or sale of assets, your personal data may be transferred as part of that transaction.</p>
+
+            <h3>5.3 Legal Requirements</h3>
+            <p>We may disclose your personal data if required to do so by law or in response to valid requests by public authorities.</p>
+
+            <div class="info-box">
+                <strong><i class="fas fa-info-circle"></i> Protection Measures:</strong> When we share your data with third parties, we require them to agree to use your data in accordance with this Privacy Notice and applicable law. We only permit them to process your data for specified purposes and in accordance with our instructions.
+            </div>
+
+            <h2>6. International Transfers</h2>
+            <p>We may transfer your personal data to locations in another country, if this is permissible pursuant to applicable laws in your location. In the event of international transfers, we shall put in place measures necessary to protect your data and ensure the same level of protection available in the country of data origin.</p>
+
+            <h2>7. Data Security</h2>
+            <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. These measures include:</p>
+            <ul>
+                <li>Encryption of data in transit and at rest</li>
+                <li>Regular security assessments and audits</li>
+                <li>Access controls and authentication</li>
+                <li>Employee training on data protection</li>
+                <li>Incident response procedures</li>
+            </ul>
+
+            <p>We limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.</p>
+
+            <h2>8. Data Retention</h2>
+            <p>We will only retain your personal data for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+
+            <p>To determine the appropriate retention period, we consider:</p>
+            <ul>
+                <li>The amount, nature, and sensitivity of the personal data</li>
+                <li>The potential risk of harm from unauthorized use or disclosure</li>
+                <li>The purposes for which we process your personal data</li>
+                <li>Whether we can achieve those purposes through other means</li>
+                <li>Applicable legal requirements</li>
+            </ul>
+
+            <h2>9. Your Legal Rights</h2>
+            <p>Under data protection laws, you have rights including:</p>
+
+            <h3>9.1 Right to Access</h3>
+            <p>You have the right to request a copy of the personal data we hold about you.</p>
+
+            <h3>9.2 Right to Rectification</h3>
+            <p>You have the right to request that we correct any inaccurate or incomplete personal data.</p>
+
+            <h3>9.3 Right to Erasure</h3>
+            <p>You have the right to request that we delete your personal data in certain circumstances.</p>
+
+            <h3>9.4 Right to Restrict Processing</h3>
+            <p>You have the right to request that we restrict the processing of your personal data in certain circumstances.</p>
+
+            <h3>9.5 Right to Data Portability</h3>
+            <p>You have the right to receive your personal data in a structured, commonly used format and to transmit it to another organization.</p>
+
+            <h3>9.6 Right to Object</h3>
+            <p>You have the right to object to the processing of your personal data in certain circumstances, including for marketing purposes.</p>
+
+            <h3>9.7 Right to Withdraw Consent</h3>
+            <p>Where we rely on your consent to process your personal data, you have the right to withdraw that consent at any time.</p>
+
+            <h2>10. Cookies and Similar Technologies</h2>
+            <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with small amounts of data which may include an anonymous unique identifier.</p>
+
+            <h3>10.1 Types of Cookies We Use</h3>
+            <ul>
+                <li><strong>Essential Cookies:</strong> Necessary for the website to function properly</li>
+                <li><strong>Performance Cookies:</strong> Help us understand how visitors use our website</li>
+                <li><strong>Functional Cookies:</strong> Enable personalized features and remember your preferences</li>
+                <li><strong>Advertising Cookies:</strong> Used to deliver relevant advertisements</li>
+            </ul>
+
+            <h3>10.2 Managing Cookies</h3>
+            <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
+
+            <h2>11. Children's Privacy</h2>
+            <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal data from children. If you become aware that a child has provided us with personal data, please contact us immediately.</p>
+
+            <h2>12. Changes to This Privacy Notice</h2>
+            <p>We may update this Privacy Notice from time to time. We will notify you of any changes by posting the new Privacy Notice on this page and updating the "Last Updated" date at the top of this notice.</p>
+
+            <h2>13. Contact Us</h2>
+            <p>If you have any questions about this Privacy Notice or wish to exercise your legal rights, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> [email protected]</li>
+                <li><strong>Data Privacy Officer:</strong> [email protected]</li>
+                <li><strong>Phone:</strong> Customer service hotline</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Your privacy matters to us.</strong> We are committed to protecting your personal information and being transparent about how we use it. If you have any concerns about how we handle your data, please don't hesitate to contact us.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Need Help?</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="#">How to shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Jumia</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="./terms.html">Terms & Conditions</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Make Money</h4>
+                    <ul>
+                        <li><a href="#">Sell on Jumia</a></li>
+                        <li><a href="#">Vendor hub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jumia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

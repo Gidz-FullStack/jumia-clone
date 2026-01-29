@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery & Returns Timelines | Jumia Nigeria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #282828;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: #313133;
+            padding: 8px 0;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #f68b1e;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .search-container {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search-container button {
+            background-color: #f68b1e;
+            color: #fff;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .header-icon {
+            text-decoration: none;
+            color: #282828;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .header-icon i {
+            font-size: 20px;
+        }
+
+        .header-icon:hover {
+            color: #f68b1e;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+        }
+
+        .nav-content a {
+            text-decoration: none;
+            color: #282828;
+            padding: 12px 0;
+            white-space: nowrap;
+            font-size: 14px;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-content a:hover {
+            color: #f68b1e;
+            border-bottom-color: #f68b1e;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 13px;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #f68b1e;
+        }
+
+        .breadcrumb span {
+            color: #999;
+            margin: 0 8px;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #282828;
+            border-bottom: 2px solid #f68b1e;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            padding: 8px 0;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            color: #f68b1e;
+            font-weight: 500;
+        }
+
+        /* Content Area */
+        .content-area {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .content-area h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #282828;
+        }
+
+        .content-area .subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .content-area h2 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            color: #282828;
+        }
+
+        .content-area h3 {
+            font-size: 18px;
+            margin: 25px 0 10px;
+            color: #f68b1e;
+        }
+
+        .content-area p {
+            margin-bottom: 15px;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .content-area ul,
+        .content-area ol {
+            margin: 15px 0 15px 30px;
+            color: #444;
+        }
+
+        .content-area li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: #fff8f0;
+            border-left: 4px solid #f68b1e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            color: #282828;
+        }
+
+        .steps-container {
+            display: grid;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .step-number {
+            background: #f68b1e;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+            color: #282828;
+        }
+
+        .step-content p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #f68b1e;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #e57a0d;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background: #f68b1e;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #313133;
+            color: #fff;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #f68b1e;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-section a:hover {
+            color: #f68b1e;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: #444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #f68b1e;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            z-index: 999;
+            display: none;
+        }
+
+        .cookie-banner.show {
+            display: block;
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cookie-banner button {
+            background: #f68b1e;
+            color: #fff;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        @media (max-width: 968px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .content-area {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>
+                <a href="#"><i class="fas fa-store"></i> Sell on Jumia</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <a href="./index.html" class="logo">JUMIA</a>
+            <div class="search-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search products, brands and categories...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="header-icons">
+                <a href="#" class="header-icon">
+                    <i class="far fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="#" class="header-icon">
+                    <i class="far fa-question-circle"></i>
+                    <span>Help</span>
+                </a>
+                <a href="#" class="header-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <a href="#">Appliances</a>
+            <a href="#">Phones & Tablets</a>
+            <a href="#">Health & Beauty</a>
+            <a href="#">Home & Office</a>
+            <a href="#">Electronics</a>
+            <a href="#">Fashion</a>
+            <a href="#">Supermarket</a>
+            <a href="#">Computing</a>
+            <a href="#">Baby Products</a>
+            <a href="#">Gaming</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Home</a>
+        <span>›</span>
+        <a href="#">Help Center</a>
+        <span>›</span>
+        <span>Delivery & Returns Timelines</span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Help Topics</h3>
+            <ul>
+                <li><a href="#">Place an Order</a></li>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Track an Order</a></li>
+                <li><a href="#">Cancel an Order</a></li>
+                <li><a href="#" class="active">Returns & Refunds</a></li>
+                <li><a href="#">Delivery Options</a></li>
+                <li><a href="#">Jumia Account</a></li>
+                <li><a href="#">Warranty & Support</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            <h1>Delivery & Returns Timelines</h1>
+            <p class="subtitle">Learn about our return policy, timelines, and refund process</p>
+
+            <div class="highlight-box">
+                <h3><i class="fas fa-info-circle"></i> Quick Summary</h3>
+                <p><strong>Return Window:</strong> You have 7 days to return items after delivery</p>
+                <p><strong>Refund Timeline:</strong> 10 business days for most cities</p>
+                <p><strong>Full Refund:</strong> Get your money back with no deductions</p>
+            </div>
+
+            <h2>Return Policy Overview</h2>
+            <p>At Jumia Nigeria, we want you to be completely satisfied with your purchase. If you're not happy with your order, we offer an easy return and refund policy to ensure your shopping experience is hassle-free.</p>
+
+            <h3>Eligibility for Returns</h3>
+            <p>You can return most items purchased on Jumia within 7 days of delivery. To be eligible for a return, items must meet the following conditions:</p>
+            <ul>
+                <li>Item must be in its original condition with all seals, tags, and accessories intact</li>
+                <li>Item must be in its original packaging</li>
+                <li>Free gifts (if any) must be returned along with the item</li>
+                <li>Return request must be initiated within 7 days of delivery</li>
+            </ul>
+
+            <h3>Valid Reasons for Returns</h3>
+            <p>We accept returns for the following reasons:</p>
+            <ul>
+                <li>Wrong product delivered</li>
+                <li>Damaged or defective product</li>
+                <li>Product does not match description</li>
+                <li>Fake or counterfeit product</li>
+                <li>Change of mind (for fashion items only - excludes underwear, adult toys, perfumes, cosmetics, hair extensions, and jewelry)</li>
+            </ul>
+
+            <div class="info-card">
+                <h3>Non-Returnable Items</h3>
+                <p>Please note that certain items cannot be returned:</p>
+                <ul>
+                    <li>Jumia Global items (change of mind returns not accepted)</li>
+                    <li>Underwear and intimate apparel</li>
+                    <li>Opened cosmetics and perfumes</li>
+                    <li>Adult toys</li>
+                    <li>Digital products and services</li>
+                    <li>Fresh food items (refunds only for delivery failures)</li>
+                </ul>
+            </div>
+
+            <h2>How to Return an Item</h2>
+            <p>Returning an item on Jumia is simple. Follow these steps:</p>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Log into Your Account</h4>
+                        <p>Go to "My Orders" in your Jumia account</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Select the Order</h4>
+                        <p>Click on "Order Details" to open the specific order containing the item you want to return</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Choose Products to Return</h4>
+                        <p>Select the quantity to return, choose the reason for return, and add any comments to clarify your request</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Submit Return Request</h4>
+                        <p>Complete the return form or call our customer service for assistance</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Package the Item</h4>
+                        <p>Place the item in its original packaging with all accessories, tags, and labels</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>Return Pickup or Drop-off</h4>
+                        <p>Our delivery agent will pick up the item, or you can drop it off at one of our pickup stations</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="cta-button">Start a Return Request</a>
+
+            <h2>Return and Refund Timelines</h2>
+            
+            <h3>Return Pickup Timeline</h3>
+            <p>The return pickup time starts from the day you make a request to return an item to the day our delivery agent retrieves the item. This typically takes 1-5 business days.</p>
+
+            <h3>Refund Processing Timeline</h3>
+            <p>The refund time starts from the day the item is picked up by our delivery agent to the day the refund process is completed.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Refund Timeline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lagos</td>
+                        <td>10 business days</td>
+                    </tr>
+                    <tr>
+                        <td>Ibadan</td>
+                        <td>10 business days</td>
+                    </tr>
+                    <tr>
+                        <td>Abuja</td>
+                        <td>10 business days</td>
+                    </tr>
+                    <tr>
+                        <td>Port Harcourt</td>
+                        <td>10 business days</td>
+                    </tr>
+                    <tr>
+                        <td>Abeokuta</td>
+                        <td>10 business days</td>
+                    </tr>
+                    <tr>
+                        <td>Other Cities</td>
+                        <td>10 business days</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <h3><i class="fas fa-clock"></i> Important Note</h3>
+                <p>If the reason for returning an item cannot be validated through our quality check process, the item will be redelivered to you and a refund will not be processed.</p>
+            </div>
+
+            <h2>Refund Methods</h2>
+            <p>We offer the following refund options for returned items:</p>
+            <ul>
+                <li><strong>Store Credit:</strong> Instant credit to your Jumia account for future purchases</li>
+                <li><strong>Bank Transfer:</strong> Direct refund to your bank account (takes 2-5 days to reflect)</li>
+                <li><strong>Mobile Money Transfer:</strong> For customers using mobile money services</li>
+            </ul>
+
+            <p><strong>Full Refund Guarantee:</strong> For prepaid orders, you will receive a full refund with no deductions when your return is approved.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>Can I return an item after 7 days?</h3>
+            <p>You will not be able to return an item after 7 days. However, if the item is faulty, it may be covered under warranty. Visit our warranty page for more information.</p>
+
+            <h3>What happens if I miss the pickup attempts?</h3>
+            <p>If you miss both pickup attempts, your return request will be cancelled and you will no longer be able to return that item.</p>
+
+            <h3>Can I replace or exchange an item instead of getting a refund?</h3>
+            <p>At the moment, Jumia does not offer replacement or exchange of items. However, you can return an item and receive a full refund, then place a new order for the correct item.</p>
+
+            <h3>Do I have to return free gifts?</h3>
+            <p>Yes, any free gifts or promotional items received with your order must also be returned along with the main product.</p>
+
+            <h3>I haven't received my bank transfer refund. What should I do?</h3>
+            <p>Bank transfers typically take 2-5 days to reflect in your account. If you haven't received your refund after this period, please contact our customer service team.</p>
+
+            <h3>Why was my item redelivered instead of refunded?</h3>
+            <p>Returned items will be redelivered to you if we cannot verify or validate your reason for returning it during the quality check process.</p>
+
+            <h2>Quality Check Process</h2>
+            <p>All returned items undergo a quality check to verify the reason for return. This process ensures that:</p>
+            <ul>
+                <li>The item is in its original condition</li>
+                <li>All accessories and packaging are included</li>
+                <li>The stated reason for return is valid</li>
+                <li>The item has not been damaged by the customer</li>
+            </ul>
+
+            <h2>Contact Customer Service</h2>
+            <p>If you have any questions about returns or need assistance with your return request, our customer service team is here to help:</p>
+            <ul>
+                <li><strong>Phone:</strong> Call our customer service hotline</li>
+                <li><strong>Live Chat:</strong> Chat with us directly on the website</li>
+                <li><strong>Contact Form:</strong> Submit a request through our contact form</li>
+                <li><strong>Email:</strong> Send us an email with your order details</li>
+            </ul>
+
+            <a href="#" class="cta-button">Contact Customer Service</a>
+
+            <div class="info-card">
+                <h3><i class="fas fa-shield-alt"></i> Your Satisfaction is Our Priority</h3>
+                <p>We are committed to providing you with the best online shopping experience. Our return and refund policy is designed to give you peace of mind when shopping on Jumia. If you have any concerns or feedback, please don't hesitate to reach out to us.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Need Help?</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="#">How to shop on Jumia</a></li>
+                        <li><a href="#">Delivery options</a></li>
+                        <li><a href="#">Return a product</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Service Center</a></li>
+                        <li><a href="#">Corporate purchases</a></li>
+                        <li><a href="#">Report a Product</a></li>
+                        <li><a href="#">Dispute Resolution</a></li>
+                        <li><a href="#">Pickup Stations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Jumia</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Jumia careers</a></li>
+                        <li><a href="./terms.html">Terms and Conditions</a></li>
+                        <li><a href="./privacy.html">Privacy Notice</a></li>
+                        <li><a href="#">Cookie Notice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Make Money with Jumia</h4>
+                    <ul>
+                        <li><a href="#">Sell on Jumia</a></li>
+                        <li><a href="#">Vendor hub</a></li>
+                        <li><a href="#">Become a Sales Consultant</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jumia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    
+</body>
+</html>

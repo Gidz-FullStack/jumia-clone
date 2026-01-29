@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | Jumia Nigeria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #282828;
+            line-height: 1.7;
+            background: #f5f5f5;
+        }
+
+        .top-bar {
+            background-color: #313133;
+            padding: 8px 0;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #f68b1e;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .search-container {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+        }
+
+        .search-container button {
+            background-color: #f68b1e;
+            color: #fff;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .header-icon {
+            text-decoration: none;
+            color: #282828;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .header-icon:hover {
+            color: #f68b1e;
+        }
+
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+        }
+
+        .nav-content a {
+            text-decoration: none;
+            color: #282828;
+            padding: 12px 0;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f68b1e 0%, #ff9d3d 100%);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f68b1e;
+        }
+
+        .content-box h2 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            color: #282828;
+        }
+
+        .content-box h3 {
+            font-size: 18px;
+            margin: 25px 0 10px;
+            color: #f68b1e;
+        }
+
+        .content-box p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            margin: 15px 0 15px 30px;
+            color: #444;
+        }
+
+        .content-box li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #fff8f0;
+            border-left: 4px solid #f68b1e;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #313133;
+            color: #fff;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #f68b1e;
+            text-transform: uppercase;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-section a:hover {
+            color: #f68b1e;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+            }
+
+            .content-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="#"><i class="fas fa-store"></i> Sell on Jumia</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <a href="./index.html" class="logo">JUMIA</a>
+            <div class="search-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search products, brands and categories...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="header-icons">
+                <a href="#" class="header-icon">
+                    <i class="far fa-user"></i>
+                    <span>Account</span>
+                </a>
+                <a href="#" class="header-icon">
+                    <i class="far fa-question-circle"></i>
+                    <span>Help</span>
+                </a>
+                <a href="#" class="header-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <a href="#">Appliances</a>
+            <a href="#">Phones & Tablets</a>
+            <a href="#">Health & Beauty</a>
+            <a href="#">Electronics</a>
+            <a href="#">Fashion</a>
+            <a href="#">Supermarket</a>
+            <a href="#">Computing</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Terms and Conditions</h1>
+        <p>Please read these terms carefully before using Jumia</p>
+    </section>
+
+    <div class="content-wrapper">
+        <div class="content-box">
+            <p class="last-updated"><strong>Last Updated:</strong> January 2024</p>
+
+            <p>Welcome to Jumia.com.ng. These Terms and Conditions apply to the website and all of its divisions, subsidiaries, and affiliate operated Internet sites which reference these Terms and Conditions.</p>
+
+            <h2>1. Introduction</h2>
+            <p>By accessing and using the Jumia marketplace, you confirm that you are in agreement with and bound by the terms and conditions contained in these Terms of Use. This agreement is between you and Jumia (referred to as "we", "us" or "our").</p>
+
+            <div class="highlight">
+                <strong>Important:</strong> If you do not agree to these terms and conditions, please do not use this website.
+            </div>
+
+            <h2>2. Use of the Marketplace</h2>
+            <h3>2.1 Marketplace Services</h3>
+            <p>The marketplace provides an online location for sellers to sell and buyers to purchase products. Key points include:</p>
+            <ul>
+                <li>We accept binding sales on behalf of sellers</li>
+                <li>Unless Jumia is indicated as the seller, we are not a party to the transaction between seller and buyer</li>
+                <li>A contract comes into force between buyer and seller upon the buyer's confirmation of purchase</li>
+                <li>The seller's terms of business shall govern the contract for sale and purchase</li>
+            </ul>
+
+            <h3>2.2 User Registration</h3>
+            <p>To use certain features of the marketplace, you must register for an account. When registering, you agree to:</p>
+            <ul>
+                <li>Provide accurate, current, and complete information</li>
+                <li>Maintain and promptly update your registration information</li>
+                <li>Maintain the security of your password and accept all risks of unauthorized access</li>
+                <li>Be fully responsible for all uses of your account</li>
+                <li>Notify us immediately of any unauthorized use of your account</li>
+            </ul>
+
+            <h2>3. Buying and Selling</h2>
+            <h3>3.1 Product Listings</h3>
+            <p>All product listings must be accurate and not misleading. We reserve the right to remove any listing that violates our policies or these terms and conditions.</p>
+
+            <h3>3.2 Pricing and Payment</h3>
+            <ul>
+                <li>All prices are listed in Nigerian Naira (NGN) unless otherwise stated</li>
+                <li>Prices are subject to change without notice</li>
+                <li>Payment must be made through approved payment methods</li>
+                <li>We reserve the right to refuse or cancel any order</li>
+            </ul>
+
+            <h3>3.3 Order Confirmation</h3>
+            <p>Once you place an order, you will receive an email confirmation. This confirmation does not signify our acceptance of your order, nor does it constitute confirmation of our offer to sell. We reserve the right to accept or decline your order for any reason.</p>
+
+            <h2>4. Delivery and Returns</h2>
+            <h3>4.1 Delivery</h3>
+            <p>Delivery times are estimates and may vary depending on your location and product availability. We are not liable for delays in delivery.</p>
+
+            <h3>4.2 Returns and Refunds</h3>
+            <p>Returns and refunds are managed in accordance with our Returns Policy. Key points:</p>
+            <ul>
+                <li>Products may be returned within 7 days of delivery</li>
+                <li>Products must be in original condition with all tags and packaging</li>
+                <li>Refunds will be processed according to our refund timelines</li>
+                <li>Some products are not eligible for return</li>
+            </ul>
+
+            <h2>5. User Conduct</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the marketplace for any unlawful purpose</li>
+                <li>Post or transmit any content that is illegal, harmful, threatening, abusive, or otherwise objectionable</li>
+                <li>Impersonate any person or entity</li>
+                <li>Interfere with or disrupt the marketplace or servers</li>
+                <li>Attempt to gain unauthorized access to any portion of the marketplace</li>
+                <li>Use any robot, spider, or other automated device to access the marketplace</li>
+                <li>Sell counterfeit or prohibited items</li>
+            </ul>
+
+            <h2>6. Intellectual Property</h2>
+            <p>All content on the Jumia marketplace, including but not limited to text, graphics, logos, images, and software, is the property of Jumia or its content suppliers and is protected by intellectual property laws.</p>
+            
+            <p>You may not:</p>
+            <ul>
+                <li>Reproduce, duplicate, copy, sell, or exploit any portion of the marketplace without our express written permission</li>
+                <li>Use our trademarks or trade names without authorization</li>
+                <li>Remove any copyright or proprietary notices</li>
+            </ul>
+
+            <h2>7. Privacy and Personal Data</h2>
+            <p>Your use of the marketplace is also governed by our Privacy Policy. By using the marketplace, you consent to the processing of your personal data as outlined in our Privacy Policy.</p>
+
+            <h3>7.1 Data Collection</h3>
+            <p>We collect personal data to provide and improve our services. This includes:</p>
+            <ul>
+                <li>Contact information (name, email, phone number, address)</li>
+                <li>Payment information</li>
+                <li>Purchase history and preferences</li>
+                <li>Device and browsing information</li>
+            </ul>
+
+            <h2>8. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law:</p>
+            <ul>
+                <li>Jumia shall not be liable for any indirect, incidental, special, or consequential damages</li>
+                <li>Our total liability shall not exceed the amount paid by you for the product or service</li>
+                <li>We do not warrant that the marketplace will be uninterrupted or error-free</li>
+                <li>We are not responsible for the conduct of sellers or buyers</li>
+            </ul>
+
+            <h2>9. Indemnification</h2>
+            <p>You agree to indemnify and hold Jumia harmless from any claims, losses, damages, liabilities, and expenses (including legal fees) arising out of your use of the marketplace, your violation of these terms, or your violation of any rights of another party.</p>
+
+            <h2>10. Dispute Resolution</h2>
+            <h3>10.1 Dispute Resolution Policy</h3>
+            <p>We encourage users to resolve disputes amicably. If you have a dispute with a seller or another user, please contact our customer service team for assistance.</p>
+
+            <h3>10.2 Governing Law</h3>
+            <p>These Terms and Conditions are governed by the laws of the Federal Republic of Nigeria. Any disputes shall be subject to the exclusive jurisdiction of the Nigerian courts.</p>
+
+            <h2>11. Modifications to Terms</h2>
+            <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to the marketplace. Your continued use of the marketplace following any changes constitutes acceptance of the new terms.</p>
+
+            <h2>12. Termination</h2>
+            <p>We may suspend or terminate your account and access to the marketplace at any time, without notice, for conduct that we believe:</p>
+            <ul>
+                <li>Violates these Terms and Conditions</li>
+                <li>Is harmful to other users, third parties, or our business interests</li>
+                <li>Involves fraudulent or illegal activity</li>
+            </ul>
+
+            <h2>13. Anti-Fraud and Compliance</h2>
+            <p>We operate an anti-fraud and anti-money laundering compliance program. We reserve the right to:</p>
+            <ul>
+                <li>Perform due diligence checks on all users</li>
+                <li>Request verification documents</li>
+                <li>Suspend accounts pending investigation</li>
+                <li>Report suspicious activity to relevant authorities</li>
+            </ul>
+
+            <h2>14. Contact Information</h2>
+            <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> support@jumia.com.ng</li>
+                <li><strong>Phone:</strong> Customer service hotline</li>
+                <li><strong>Address:</strong> Jumia Nigeria</li>
+            </ul>
+
+            <h2>15. Entire Agreement</h2>
+            <p>These Terms and Conditions, together with our Privacy Policy and any other legal notices published on the marketplace, constitute the entire agreement between you and Jumia concerning your use of the marketplace.</p>
+
+            <div class="highlight">
+                <p><strong>By using the Jumia marketplace, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Need Help?</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="#">How to shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Jumia</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="./terms.html">Terms & Conditions</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Make Money</h4>
+                    <ul>
+                        <li><a href="#">Sell on Jumia</a></li>
+                        <li><a href="#">Vendor hub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jumia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
